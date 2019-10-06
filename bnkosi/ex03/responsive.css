@@ -1,0 +1,35 @@
+   table{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;        
+    }
+    tr{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    td{
+        font-size: 20px;
+        text-align: center;
+        box-sizing: border-box;
+        flex-grow: 1;
+        overflow: hidden;
+        border: solid white;
+    }
+    sub{
+        vertical-align: -20px;
+        text-align: left;
+        font-size: 12px;
+        padding-right: 10px;
+    }
+    sup{
+        vertical-align: 20px;
+        text-align: right;
+        font-size: 12px;
+        padding-left: 10px;
+    }
+    .center{
+        display: block;
+        width: 100px;
+        margin-left: auto;
+        margin-right: auto;
+    }
