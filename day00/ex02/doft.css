@@ -6,7 +6,7 @@ body {
 	height: 870px;
 	width: 1400px;
 	margin: auto;
-	border-radius: 15px;
+	border-radius: 15px; 
 	position: relative;
 }
 
@@ -15,9 +15,9 @@ body {
 	height: 119px;
 	width: 1400px;
 	margin: auto;
-	position: relative;
+	position: absolute;
 	border-radius: 15px;
-	box-shadow: 5px 10px 10px
+	box-shadow: 5px 10px 10px;
 }
 
 .day42 {
@@ -99,12 +99,12 @@ h5 {
 p1 {
 	font-style: italic;
 }
-word1 {
+change1 {
 	font-size: 36pt;
 	font-family: serif;
 }
-word2 {
-	text-shadow: 5px 5px 2px;
+change2 {
+	text-shadow: 5px 5px 2px red;
 }
 form {
 	display: inline;
