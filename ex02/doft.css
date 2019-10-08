@@ -1,0 +1,119 @@
+body {
+	background-color: #505050
+}
+.content {
+	background: #505050;
+	height: 870px;
+	width: 1400px;
+	margin: auto;
+	border-radius: 15px;
+	position: relative;
+}
+
+.top {
+	background: #909090;
+	height: 119px;
+	width: 1400px;
+	margin: auto;
+	position: relative;
+	border-radius: 15px;
+	box-shadow: 5px 10px 10px
+}
+
+.day42 {
+ 	border-radius: 15px;
+ 	position: absolute;
+ 	max-width: 100%;
+	max-height: 100%;
+}
+.middleblock {
+	background: #505050;
+	height: 1000px;
+	width: 1400px;
+	position: absolute;
+	top: 140px;
+}
+.middleimg {
+	background: #909090;
+	border-radius: 15px;
+	height: 570px;
+	width: 950px;
+	margin: auto;
+	position: relative;
+	box-shadow: 5px 10px 10px
+}
+
+.leftblock {
+	background: #909090;
+	border-radius: 15px;
+	height: 490px;
+	width: 190px;
+	position: absolute;
+	top: 0;
+	left: 15px;
+	box-shadow: 5px 10px 10px;
+}
+.rightblock {
+	background: #909090;
+	border-radius: 15px;
+	height: 490px;
+	width: 190px;
+	position: absolute;
+	top: 0;
+	right: 15px;
+	box-shadow: 5px 10px 10px;
+}
+
+h6 {
+	background: url(resources/brick.jpg);
+	width: 160px;
+	height: 120px;
+	position: absolute;
+	right: 15px;
+	top: 250px;
+}
+.brick1 {
+	position: absolute;
+	right: 15px;
+	top: 250px;
+}
+.messagebox {
+	background-color: #88FF89;
+	box-shadow: 5px 10px 10px;
+	border-radius: 15px;
+	height: 250px;
+	width: 600px;
+	position: absolute;
+	left: -100px;
+	bottom: 0;
+}
+p {
+	word-spacing: 6pt;
+	font-family: sans-serif;
+	position: absolute;
+	left: 10px;
+}
+h5 {
+	width: 200px;
+}
+p1 {
+	font-style: italic;
+}
+word1 {
+	font-size: 36pt;
+	font-family: serif;
+}
+word2 {
+	text-shadow: 5px 5px 2px;
+}
+form {
+	display: inline;
+	font-size: 23px;
+	position: absolute;
+	bottom: 110px;
+	left: 10px;
+}
+
+input {
+	display: inline;
+}
