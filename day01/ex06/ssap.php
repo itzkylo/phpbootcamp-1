@@ -1,11 +1,18 @@
 <?php
     $c = 1;
+    $ind = 0;
     while ($argv[$c] != NULL)
     {
+        
         $out = explode(" ",$argv[$c]);
         $ret = array_filter($out, 'strlen');
-        rsort($ret);
-        print_r($ret);
+        sort($ret);
         $c++;
     }
+    while ($ret[$i] != NULL)
+        {
+            echo $ret[$i];
+            echo "\n";
+            $i++;
+        }
 ?>
