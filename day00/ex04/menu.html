@@ -1,29 +1,53 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <style>
+            body{
+                background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAb2p0pSZmHQxmyWk0pdwbzZUz9WvX-QQWTN_lOphU4lqRCOsa");
+                opacity: 30%;
+            }
+            h1{
+                font-size: 40px;
+            }
+            p{
+                font-size: 20px;
+            }
+        </style>
             <link href="https://fonts.googleapis.com/css?family=Mansalva&display=swap" rel="stylesheet">
             <link rel="stylesheet" href="menu.css">
     </head>
     <body>
-        <ul>
-            <li class="dropdown"><a href="" class="dropdwn">Ingredients</a>
-                <div class="dropdown-content">
-                    <a href="#">CSS</a>
-                    <a href="#">HTML</a>
-                    <a href="#">Answer</a>
-                </div>
-            </li>
-        </ul>
-        <h1>SCNF Ham and Cheese Sandwich</h1>
-        <p>Hover over "Ingredients" to see dropdown menu</p>
-        <p>Hover of answer below for the answer</p>
-</br>
-        <div class="dropdown">
-            <span style="font-size: 20px"><b>Answer</b></span>
-            <div class="dropdown-content">
-                <p>CSS</p>
-                <p>HTML</p>
-            </div>
-        </div>
+            <div class="navigation">
+                    <ul>
+                      <li class="has-sub"> <a href="">Menu</a>
+                        <ul>
+                          <li class="has-sub"> <a href="">Submenu</a>
+                            <ul>
+                              <li><a href="#">SubSubmenu</a></li>
+                              <li class="has-sub"><a href="">SubSubmenu</a>
+                                <ul>
+                                  <li><a href="">SubSubmenu</a></li>
+                                  <li><a href="">SubSubmenu</a></li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                          <li><a href="#">Submenu</a></li>
+                        </ul>
+                      </li>
+                      <li class="has-sub"> <a href="#">Menu</a>
+                        <ul>
+                          <li><a href="#">Submenu</a></li>
+                          <li><a href="#">Submenu</a></li>
+                        </ul>
+                      </li>
+                      <li class="has-sub"> <a href="#">Menu</a>
+                        <ul>
+                          <li><a href="#">Submenu</a></li>
+                          <li><a href="#">Submenu</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
     </body>
-</html>
+   
