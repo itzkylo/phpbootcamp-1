@@ -3,7 +3,7 @@
 
     if ($argc == 1)
         exit;
-    $in = explode(" ", $argv[1]);
+    $out = explode(" ", $argv[1]);
     $c = 1;
     while ($out[$c])
     {
@@ -12,4 +12,5 @@
         $c++;
     }
     echo $out[0];
+    echo "\n";
 ?>

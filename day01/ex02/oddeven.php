@@ -10,7 +10,7 @@
         }
         if (is_numeric($num))
         {
-            if ($num % 2 == 0)
+            if (!bcmod($num, 2))
             {
                 echo "The number $num is even";
                 print "\n";
