@@ -1,18 +1,15 @@
 <?php
-    $c = 1;
-    $ind = 0;
-    while ($argv[$c] != NULL)
+    if ($argc == 1)
+        exit;
+    $in = implode(" ", $argv);
+    $out = explode(" ", $in);
+    unset($out[0]);
+    sort($out);
+    $i = 0;
+    while ($out[$i] != NULL)
     {
-        
-        $out = explode(" ",$argv[$c]);
-        $ret = array_filter($out, 'strlen');
-        sort($ret);
-        $c++;
-    }
-    while ($ret[$i] != NULL)
-        {
-            echo $ret[$i];
-            echo "\n";
-            $i++;
-        }
+        echo $out[$i];
+        echo "\n";
+        $i++;
+    }       
 ?>
