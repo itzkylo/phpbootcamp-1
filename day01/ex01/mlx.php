@@ -1,3 +1,4 @@
+#!/usr/bin/php
 <?php
     $out = 'x';
     $len2 = 0;
