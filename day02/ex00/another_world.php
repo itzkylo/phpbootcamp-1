@@ -4,6 +4,6 @@
         exit;
     $in = preg_split('/\s+/', $argv[1]);
     $out = implode(" ",$in);
+    $out = trim($out);
     echo $out."\n"
 ?>
-

@@ -3,7 +3,7 @@
     function hyper_cmp($in1, $in2)
     {
        $c = 0;
-       $t_line = "abcdefghijklmnopqrstuvwxyz1234567890!\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
+       $t_line = "abcdefghijklmnopqrstuvwxyz0123456789!\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
 
        while (($c < strlen($in1)) || ($c < strlen($in2)))
        {
