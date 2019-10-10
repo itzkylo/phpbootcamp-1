@@ -3,7 +3,7 @@
     if ($argc == 1)
         exit;
     $in = implode(" ", $argv);
-    $out = explode(" ", $in);
+    $out = preg_split('/\s+/', $in);
     unset($out[0]);
     sort($out);
     $i = 0;
