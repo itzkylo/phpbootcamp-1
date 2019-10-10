@@ -9,7 +9,6 @@
     {
         $indicator = true;
         $c = 0;
-
         while ($in[$c])
         {
             if ($in[$c] == ">")
@@ -17,9 +16,12 @@
             if ($in[$c] == "<")
                 $indicator = false;
             if ($indicator)
-                $out = ucfirst($in{$c});
+                $out = ucfirst($in[$c]);
+            else
+                $out .= ucfirst($in[$i]);
             $c++;
         }
+        return ($out);
     }
 
     function rep_noup($in)
@@ -29,10 +31,13 @@
 
     if ($argc != 2)
         exit;
-    $hfile = fopen("*.html", "w+") or die("Unable to open file");
+    if (!is_readable($input = $argv[1]))
+    {
+        die("Incorrect file\n");
+    }
+    $data = file_get_contents($input);
+    $data = preg_replace_callback('/(<.*title=\")(.*)(\".*>)/Uis', uprep, $data);
+    $data = preg_replace_callback('/(<a.*>)(.*)(<\/a>)/Uis', rep_noup, $data);
+    echo $data;
     
-
-
-
-    fclose($hfile);
 ?>
