@@ -5,7 +5,7 @@
        $c = 0;
        $t_line = "abcdefghijklmnopqrstuvwxyz1234567890!\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
 
-       while ($c < strlen($in1) || ($c < strlen($in2)))
+       while (($c < strlen($in1)) || ($c < strlen($in2)))
        {
             $indx1 = stripos($t_line, $in1[$c]);
             $indx2 = stripos($t_line, $in2[$c]);
@@ -21,18 +21,18 @@
     if ($argc == 1)
         exit;
     
-    $in = 1;
-    $out = array();
-    foreach ($argv as $elemnt)
+    $arg = 1;
+    $out = [];
+    foreach ($argv as $elem)
     {
-        if ($in++ > 1)
+        if ($arg++ > 1)
         {
-            $tmp_o = preg_split("/ +/", trim($elemnt));
-            if ($tmp_o[0] != " ")
-                $out = array_merge($out, $temp_o);
+            $tmp_o = preg_split("/ +/", trim($elem));
+            if ($tmp_o[0] != "")
+                $out = array_merge($out, $tmp_o);
         }
     }
-    usort($out,'hyper_cmp');
-    foreach ($out as $elemnt)
-        echo "$elemnt"."\n";  
+    usort($out,"hyper_cmp");
+    foreach ($out as $elem)
+        echo "$elem"."\n";  
 ?>
