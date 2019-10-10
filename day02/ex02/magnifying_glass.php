@@ -7,15 +7,15 @@
 
     function checknchange($in)
     {
-        $indicator = true;
+        $flag = true;
         $c = 0;
         while ($in[$c])
         {
             if ($in[$c] == ">")
-                $indicator = true;
+                $flag = true;
             if ($in[$c] == "<")
-                $indicator = false;
-            if ($indicator)
+                $flag = false;
+            if ($flag)
                 $out = ucfirst($in[$c]);
             else
                 $out .= ucfirst($in[$i]);
