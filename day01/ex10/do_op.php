@@ -19,4 +19,9 @@
         echo ($in1 * $in2)."\n";
     else if ($sign == "%")
         echo ($in1 % $in2)."\n";
+    else
+        {
+            echo "\n";
+            exit;
+        }
 ?>
