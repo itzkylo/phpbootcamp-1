@@ -13,7 +13,7 @@
         else
             echo "";
     }
-    if ($_GET["action"] == "delete")
+    if ($_GET["action"] == "del")
     {
         setcookie($_GET["name"], $_GET["value"], time() + 3600, "/");
         echo ("Cookie is deleted\n");
