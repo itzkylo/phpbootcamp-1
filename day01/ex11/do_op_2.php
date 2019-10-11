@@ -2,49 +2,50 @@
 <?php
     if ($argc != 2)
     {
-        echo "Incorrect Parameters\n";
-        exit;
+        die("Incorrect Parameters\n");
     }
-    $c = 0;
-    $input = trim($argv[1]);
-    
-    while ($input[$c] != " " || ($input[$c] != "+" || $input[$c] != "/" || $input[$c] != "%" || $input[$c] != "*"))
+    $in1 = array_filter(explode(" ", $argv[1]));
+    $in1 = implode("",$in1);
+    if (strstr($in1,"+"))
     {
-        if ($input[0] == "-" || (is_numeric($input[$c])))
-            {
-                $in1[$c] = $input[$c];
-            }
-        $c++;
+        $ops = explode("+", $in1);
+        if (!is_numeric($ops[1]) || (!is_numeric($ops[0])))
+            die("Syntax Error\n");
+        else
+            die (($ops[0] + $ops[1])."\n");
     }
-    echo "$c\n";
-    echo "$in1";
-    while ($input[$c] == " ")
-        $c++;
-    
-    if ($input[$c] == "+" || $input[$c] == "-" || $input[$c] == "/" || $input[$c] == "%" || $input[$c] == "*")
-        $sign = $input[$c];
-    $c++;
-
-    while ($input[$c] == " ")
-        $c++;
-    
-    while ($input[$c] != " " &&  $input[$c] != NULL && ($input[$c] != "+" || $input[$c] != "/" || $input[$c] != "%" || $input[$c] != "*"))
-        {
-            if ($input[$c] == "-" || (is_numeric($input[$c])))
-                {
-                    $in2[$c] = $input[$c];
-                }
-            $c++;
-        }
-    if ($sign == "+")
-        echo ($in1 + $in2)."\n";
-    else if ($sign == "-")
-        echo ($in1 - $in2)."\n";
-    else if ($sign == "/")
-        echo ($in1 / $in2)."\n";
-    else if ($sign == "*")
-        echo ($in1 * $in2)."\n";
-    else if ($sign == "%")
-        echo ($in1 % $in2)."\n";
-
+    if (strstr($in1,"-"))
+    {
+        $ops = explode("-", $in1);
+        if (!is_numeric($ops[1]) || (!is_numeric($ops[0])))
+            die("Syntax Error\n");
+        else
+            die (($ops[0] - $ops[1])."\n");
+    }
+    if (strstr($in1,"/"))
+    {
+        $ops = explode("/", $in1);
+        if (!is_numeric($ops[1]) || (!is_numeric($ops[0])))
+            die("Syntax Error\n");
+        else
+            die (($ops[0] / $ops[1])."\n");
+    }
+    if (strstr($in1,"*"))
+    {
+        $ops = explode("*", $in1);
+        if (!is_numeric($ops[1]) || (!is_numeric($ops[0])))
+            die("Syntax Error\n");
+        else
+            die (($ops[0] * $ops[1])."\n");
+    }
+    if (strstr($in1,"%"))
+    {
+        $ops = explode("%", $in1);
+        if (!is_numeric($ops[1]) || (!is_numeric($ops[0])))
+            die("Syntax Error\n");
+        else
+            die (($ops[0] % $ops[1])."\n");
+    }
+    else
+        die("Syntax Error");
 ?>
