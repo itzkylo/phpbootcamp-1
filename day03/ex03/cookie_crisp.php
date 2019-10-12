@@ -1,4 +1,3 @@
-#!/usr/bin/php
 <?php
     if ($_GET["action"] == "set")
     {
@@ -7,15 +6,15 @@
     }
     if ($_GET["action"] == "get")
     {
-        echo "Cookie Name: ".$_COOKIE[$_GET["name"]];
+        
         if  ((strlen($_COOKIE[$_GET["name"]]) > 0))
-            echo "\r\n";
+            echo "Cookie Value: ".$_COOKIE[$_GET["name"]];
         else
-            echo "";
+            echo "Cookie was deleted or does not exist";
     }
     if ($_GET["action"] == "del")
     {
-        setcookie($_GET["name"], $_GET["value"], time() + 3600, "/");
+        setcookie($_GET["name"], "", time() - 3600, "/");
         echo ("Cookie is deleted\n");
     }
 ?>
