@@ -13,4 +13,4 @@ date_default_timezone_set("Africa/Johannesburg");
 foreach($out as $user) {
     printf("%s %s %s\n", $user['user'], $user['inout'], date("M j H:i", $user['time1']));
 }
-?>
+?> 
